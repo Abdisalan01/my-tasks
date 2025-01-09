@@ -58,7 +58,7 @@ app.put('/:id', async(req,res)=>{
 
 app.delete('/:id', async(req,res)=>{
    const task = await Tasks.findByIdAndDelete(req.params.id)
-   res.json({message:"Waa la delete gareeyay!"});
+   res.status(200).json({message:"Waa la delete gareeyay!"});
 
 })
 
